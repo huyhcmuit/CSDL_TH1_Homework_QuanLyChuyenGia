@@ -156,7 +156,7 @@ SELECT TenCongTy, DiaChi FROM CongTy WHERE LinhVuc = N'Phát triển phần mề
 -- 62. Liệt kê tên các dự án có ngày kết thúc trong năm 2023.
 SELECT TenDuAn FROM DuAn WHERE YEAR(NgayKetThuc) = 2023; 
 -- 63. Hiển thị tên và cấp độ của các kỹ năng trong bảng ChuyenGia_KyNang.
-SELECT K.TenKyNang, C.CapDo FROM ChuyenGia_KyNang C JOIN KyNang K ON C.MaKyNang = K.MaKyNang;
+SELECT TenKyNang, CapDo FROM ChuyenGia_KyNang, KyNang WHERE ChuyenGia_KyNang.MaKyNang = KyNang.MaKyNang;
 -- 64. Liệt kê mã chuyên gia và vai trò trong các dự án từ bảng ChuyenGia_DuAn.
 SELECT MaChuyenGia, VaiTro FROM ChuyenGia_DuAn;
 -- 65. Hiển thị họ tên và ngày sinh của các chuyên gia sinh năm 1990 trở về sau.
